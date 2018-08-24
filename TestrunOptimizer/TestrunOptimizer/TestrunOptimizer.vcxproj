@@ -37,7 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\Sources\DummyClass.cpp" />
-    <ClCompile Include="test.cpp" />
+    <ClCompile Include="Tests\test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
