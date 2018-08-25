@@ -33,11 +33,13 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
-    <ClInclude Include="Code\Headers\DummyClass.h" />
+    <ClInclude Include="Code\Headers\CsvReader.h" />
+    <ClInclude Include="Code\Headers\IFileReader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Code\Sources\DummyClass.cpp" />
-    <ClCompile Include="Tests\test.cpp" />
+    <ClCompile Include="Code\Sources\CsvReader.cpp" />
+    <ClCompile Include="Code\Sources\IFileReader.cpp" />
+    <ClCompile Include="Tests\CsvReaderTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -58,6 +60,7 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <AdditionalIncludeDirectories>C:\Users\hwggg\source\repos\TestrunOptimizer\TestrunOptimizer\TestrunOptimizer\Code;C:\Users\hwggg\source\repos\TestrunOptimizer\TestrunOptimizer\TestrunOptimizer\Code\Sources;C:\Users\hwggg\source\repos\TestrunOptimizer\TestrunOptimizer\TestrunOptimizer\Code\Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
