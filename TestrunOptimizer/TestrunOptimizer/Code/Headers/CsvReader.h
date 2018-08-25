@@ -3,6 +3,7 @@
 
 class CsvReader : public IFileReader
 {
+	char delim = ',';
 protected:
-	void readStream(std::istream& is) override;
+	Data readStream(std::istream& is) override;
 };

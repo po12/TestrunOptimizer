@@ -4,6 +4,7 @@
     <ClCompile Include="Code\Sources\IFileReader.cpp" />
     <ClCompile Include="Code\Sources\CsvReader.cpp" />
     <ClCompile Include="Tests\CsvReaderTest.cpp" />
+    <ClCompile Include="Code\Sources\Duration.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -11,5 +12,6 @@
   <ItemGroup>
     <ClInclude Include="Code\Headers\IFileReader.h" />
     <ClInclude Include="Code\Headers\CsvReader.h" />
+    <ClInclude Include="Code\Headers\Duration.h" />
   </ItemGroup>
 </Project>

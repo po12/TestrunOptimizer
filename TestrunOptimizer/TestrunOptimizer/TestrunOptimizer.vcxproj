@@ -35,9 +35,11 @@
   <ItemGroup>
     <ClInclude Include="Code\Headers\CsvReader.h" />
     <ClInclude Include="Code\Headers\IFileReader.h" />
+    <ClInclude Include="Code\Headers\Duration.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\Sources\CsvReader.cpp" />
+    <ClCompile Include="Code\Sources\Duration.cpp" />
     <ClCompile Include="Code\Sources\IFileReader.cpp" />
     <ClCompile Include="Tests\CsvReaderTest.cpp" />
   </ItemGroup>
