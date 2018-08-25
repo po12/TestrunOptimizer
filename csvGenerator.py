@@ -18,7 +18,7 @@ def genDuration():
 	return "%d:%02d" % (hours, minutes)
 
 labels = ["Test ID", "Duration"]
-writer = csv.DictWriter(open(filename, "w+"), fieldnames = labels)
+writer = csv.DictWriter(open(filename, "wb+"), delimiter =',', quoting=csv.QUOTE_MINIMAL, fieldnames = labels)
 
 for i in range(num_of_runs):
 	writer.writerow(dict([

@@ -1,6 +1,10 @@
 #pragma once
-#include <filesystem>
-#include <iostream>
+#include <fstream>
+
+namespace std::filesystem
+{
+	 class path;
+}
 
 class IFileReader {
 public:
