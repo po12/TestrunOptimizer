@@ -13,7 +13,9 @@ def genTestId():
 	return randint(0, num_of_tests)
 
 def genDuration():
-	return randint(1, max_duration)
+	hours = randint(0, max_duration)
+	minutes = randint((1 if hours is 0 else 0), 60)
+	return "%d:%02d" % (hours, minutes)
 
 labels = ["Test ID", "Duration"]
 writer = csv.DictWriter(open(filename, "w+"), fieldnames = labels)
