@@ -34,12 +34,14 @@
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
     <ClInclude Include="Code\Headers\CsvReader.h" />
+    <ClInclude Include="Code\Headers\DurationExceptions.h" />
     <ClInclude Include="Code\Headers\IFileReader.h" />
     <ClInclude Include="Code\Headers\Duration.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\Sources\CsvReader.cpp" />
     <ClCompile Include="Code\Sources\Duration.cpp" />
+    <ClCompile Include="Code\Sources\DurationExceptions.cpp" />
     <ClCompile Include="Code\Sources\IFileReader.cpp" />
     <ClCompile Include="Tests\CsvReaderTest.cpp" />
     <ClCompile Include="Tests\DurationTest.cpp" />

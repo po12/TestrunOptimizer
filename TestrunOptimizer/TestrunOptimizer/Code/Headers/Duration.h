@@ -2,13 +2,6 @@
 #include <cstdint>
 #include <fstream>
 
-class MinutesOverflowException : std::runtime_error
-{
-public:
-	MinutesOverflowException(const std::string& message) throw();
-	virtual char const* what() const throw();
-};
-
 struct Duration
 {
 	uint8_t hours;

@@ -1,14 +1,8 @@
-#include "Duration.h"
 #include <sstream>
 #include <array>
 
-MinutesOverflowException::MinutesOverflowException(const std::string& message) throw() : std::runtime_error(message.c_str())
-{}
-
-char const* MinutesOverflowException::what() const throw()
-{
-	return exception::what();
-}
+#include "DurationExceptions.h"
+#include "Duration.h"
 
 bool Duration::operator==(const Duration& rhs) const
 {
@@ -32,13 +26,12 @@ std::istream& operator>>(std::istream& is, Duration& dur)
 		dur.hours++;
 		dur.minutes = 0;
 	}
-	else if (dur.minutes > 59)
+	else if (dur.minutes > 60)
 	{
 		const auto wrong_minutes = dur.minutes;
 		dur = Duration{};
-		std::ostringstream msg;
-		msg << wrong_minutes << " is not valid value for minutes in hour";
-		throw MinutesOverflowException(msg.str());
+		std::string msg =  std::to_string(wrong_minutes) + " is not valid value for minutes in hour";
+		throw MinutesOverflowException(msg.c_str());
 	}
 
 	return is;

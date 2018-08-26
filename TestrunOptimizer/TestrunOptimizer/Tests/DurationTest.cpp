@@ -3,6 +3,7 @@
 
 #include <gtest/gtest.h>
 #include "Duration.h"
+#include "DurationExceptions.h"
 
 class DurationTestSuite : public ::testing::Test
 {
