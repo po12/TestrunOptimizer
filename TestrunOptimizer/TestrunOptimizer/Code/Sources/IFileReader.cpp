@@ -1,7 +1,7 @@
 #include "IFileReader.h"
 #include <filesystem>
-#include <sstream>
-#include <iostream>
+#include <string>
+
 namespace fs = std::filesystem;
 
 Data IFileReader::read(const fs::path& path)
@@ -13,8 +13,6 @@ Data IFileReader::read(const fs::path& path)
 	}
 	else
 	{
-		std::ostringstream msg;
-		msg << "File " << path.string() << " does not exist";
-		throw std::runtime_error(msg.str());
+		throw std::runtime_error("File " + path.string() + " does not exist");
 	}
 }
