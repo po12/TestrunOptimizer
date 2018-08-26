@@ -10,6 +10,11 @@ class CsvReaderTestSuite : public ::testing::Test
 {
 public:
 	CsvReader sut;
+	void checkSingleEntry(const TestInfo& entry, const TestInfo& expected) const
+	{
+		ASSERT_EQ(std::get<0>(entry), std::get<0>(expected));
+		ASSERT_EQ(std::get<1>(entry), std::get<1>(expected));
+	}
 };
 
 TEST_F(CsvReaderTestSuite, ThrowsExceptionForNotExistingFile)
@@ -22,10 +27,17 @@ TEST_F(CsvReaderTestSuite, CanReadSingleLine)
 	auto data = sut.read("../input/simple.csv");
 	ASSERT_EQ(data.size(), 1);
 
-	const auto test_id = std::get<0>(data[0]);
-	ASSERT_EQ(test_id, 8);
+	checkSingleEntry(data[0], { 8 , Duration{1,31} });
+}
 
-	const auto duration = std::get<1>(data[0]);
-	const auto expected = Duration{ 1, 31 };
-	EXPECT_EQ(duration, expected);
+TEST_F(CsvReaderTestSuite, CanReadFileWithMultipleLines)
+{
+	auto data = sut.read("../input/multiline.csv");
+	ASSERT_EQ(data.size(), 5);
+
+	checkSingleEntry(data[0], { 3 , Duration{2,2} });
+	checkSingleEntry(data[1], { 4 , Duration{0,5} });
+	checkSingleEntry(data[2], { 8 , Duration{2,34} });
+	checkSingleEntry(data[3], { 4 , Duration{2,35} });
+	checkSingleEntry(data[4], { 4 , Duration{2,03} });
 }
