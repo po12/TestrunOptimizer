@@ -1,6 +1,6 @@
 #include "CsvReader.h"
-#include <tuple>
 #include <sstream>
+#include "TypesAliases.h"
 
 Data CsvReader::readStream(std::istream& is)
 {

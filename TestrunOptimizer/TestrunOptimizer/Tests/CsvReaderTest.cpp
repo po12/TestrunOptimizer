@@ -4,6 +4,7 @@
 #include <gtest/gtest.h>
 
 #include "CsvReader.h"
+#include "TypesAliases.h"
 #include <filesystem>
 
 class CsvReaderTestSuite : public ::testing::Test

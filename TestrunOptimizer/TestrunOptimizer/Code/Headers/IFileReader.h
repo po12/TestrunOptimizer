@@ -1,9 +1,6 @@
 #pragma once
-#include <vector>
-#include "Duration.h"
-
-using TestInfo = std::tuple<int, Duration>;
-using Data = std::vector<TestInfo>;
+#include <fstream>
+#include "TypesAliases.h"
 
 namespace std::filesystem
 {
@@ -13,6 +10,7 @@ namespace std::filesystem
 class IFileReader {
 public:
 	Data read(const std::filesystem::path&);
+	virtual ~IFileReader() = default;
 protected:
 	virtual Data readStream(std::istream&) = 0;
 };

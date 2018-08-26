@@ -37,12 +37,17 @@
     <ClInclude Include="Code\Headers\DurationExceptions.h" />
     <ClInclude Include="Code\Headers\IFileReader.h" />
     <ClInclude Include="Code\Headers\Duration.h" />
+    <ClInclude Include="Code\Headers\OptimizationStrategy.h" />
+    <ClInclude Include="Code\Headers\Optimizer.h" />
+    <ClInclude Include="Code\Headers\TypesAliases.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\Sources\CsvReader.cpp" />
     <ClCompile Include="Code\Sources\Duration.cpp" />
     <ClCompile Include="Code\Sources\DurationExceptions.cpp" />
     <ClCompile Include="Code\Sources\IFileReader.cpp" />
+    <ClCompile Include="Code\Sources\OptimizationStrategy.cpp" />
+    <ClCompile Include="Code\Sources\Optimizer.cpp" />
     <ClCompile Include="Tests\CsvReaderTest.cpp" />
     <ClCompile Include="Tests\DurationTest.cpp" />
   </ItemGroup>

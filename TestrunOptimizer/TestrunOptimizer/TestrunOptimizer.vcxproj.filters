@@ -7,6 +7,8 @@
     <ClCompile Include="Code\Sources\Duration.cpp" />
     <ClCompile Include="Tests\DurationTest.cpp" />
     <ClCompile Include="Code\Sources\DurationExceptions.cpp" />
+    <ClCompile Include="Code\Sources\OptimizationStrategy.cpp" />
+    <ClCompile Include="Code\Sources\Optimizer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -16,5 +18,8 @@
     <ClInclude Include="Code\Headers\CsvReader.h" />
     <ClInclude Include="Code\Headers\Duration.h" />
     <ClInclude Include="Code\Headers\DurationExceptions.h" />
+    <ClInclude Include="Code\Headers\OptimizationStrategy.h" />
+    <ClInclude Include="Code\Headers\Optimizer.h" />
+    <ClInclude Include="Code\Headers\TypesAliases.h" />
   </ItemGroup>
 </Project>
