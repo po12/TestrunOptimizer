@@ -42,6 +42,7 @@
     <ClCompile Include="Code\Sources\Duration.cpp" />
     <ClCompile Include="Code\Sources\IFileReader.cpp" />
     <ClCompile Include="Tests\CsvReaderTest.cpp" />
+    <ClCompile Include="Tests\DurationTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
