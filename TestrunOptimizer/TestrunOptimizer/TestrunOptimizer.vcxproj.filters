@@ -9,6 +9,8 @@
     <ClCompile Include="Code\Sources\DurationExceptions.cpp" />
     <ClCompile Include="Code\Sources\OptimizationStrategy.cpp" />
     <ClCompile Include="Code\Sources\Optimizer.cpp" />
+    <ClCompile Include="Code\Sources\MedianStrategy.cpp" />
+    <ClCompile Include="MEDIANSTRATEGY.CPP" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -21,5 +23,6 @@
     <ClInclude Include="Code\Headers\OptimizationStrategy.h" />
     <ClInclude Include="Code\Headers\Optimizer.h" />
     <ClInclude Include="Code\Headers\TypesAliases.h" />
+    <ClInclude Include="Code\Headers\MedianStrategy.h" />
   </ItemGroup>
 </Project>

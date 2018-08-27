@@ -1,9 +1,19 @@
 #include "Optimizer.h"
 #include "OptimizationStrategy.h"
+#include "MedianStrategy.h"
 
-void Optimizer::setStrategy(std::unique_ptr<OptimizationStrategy> new_strategy) noexcept
+Optimizer::Optimizer(Data& test_runs) : test_runs(test_runs)
+{ }
+
+void Optimizer::setStrategy(StrategyType new_strategy) noexcept
 {
-	strategy = std::move(new_strategy);
+	switch (new_strategy)
+	{
+		case StrategyType::MEDIAN:
+			strategy = std::make_unique<MedianStrategy>(test_runs);
+		default:
+			strategy = std::make_unique<MedianStrategy>(test_runs);
+	}
 }
 
 Data Optimizer::optimize()

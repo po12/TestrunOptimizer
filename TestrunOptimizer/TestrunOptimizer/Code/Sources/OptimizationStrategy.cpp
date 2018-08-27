@@ -1,6 +1,6 @@
 #include "OptimizationStrategy.h"
 
-OptimizationStrategy::OptimizationStrategy(Data&& test_runs) : test_runs(std::move(test_runs))
+OptimizationStrategy::OptimizationStrategy(Data& test_runs) : test_runs(test_runs)
 {
 }
 

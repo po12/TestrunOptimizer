@@ -3,13 +3,16 @@
 #include "TypesAliases.h"
 
 class OptimizationStrategy;
+enum class StrategyType;
 
 class Optimizer
 {
 public:
-	void setStrategy(std::unique_ptr<OptimizationStrategy> new_strategy) noexcept;
+	Optimizer(Data& test_runs);
+	void setStrategy(StrategyType new_strategy) noexcept;
 	Data optimize();
 private:
 	std::unique_ptr<OptimizationStrategy> strategy;
+	Data test_runs;
 };
 

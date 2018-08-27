@@ -40,6 +40,7 @@
     <ClInclude Include="Code\Headers\OptimizationStrategy.h" />
     <ClInclude Include="Code\Headers\Optimizer.h" />
     <ClInclude Include="Code\Headers\TypesAliases.h" />
+    <ClInclude Include="Code\Headers\MedianStrategy.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\Sources\CsvReader.cpp" />
@@ -48,6 +49,8 @@
     <ClCompile Include="Code\Sources\IFileReader.cpp" />
     <ClCompile Include="Code\Sources\OptimizationStrategy.cpp" />
     <ClCompile Include="Code\Sources\Optimizer.cpp" />
+    <ClCompile Include="Code\Sources\MedianStrategy.cpp" />
+    <ClCompile Include="MEDIANSTRATEGY.CPP" />
     <ClCompile Include="Tests\CsvReaderTest.cpp" />
     <ClCompile Include="Tests\DurationTest.cpp" />
   </ItemGroup>
