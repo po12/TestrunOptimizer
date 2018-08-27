@@ -9,6 +9,8 @@ public:
 	MedianStrategy() = default;
 	~MedianStrategy() = default;
 protected:
-	void calculateNewLimit() override;
+	CalculationResult calculateNewLimit() override;
+private:
+	double median(const std::vector<double>& times) const;
 };
 

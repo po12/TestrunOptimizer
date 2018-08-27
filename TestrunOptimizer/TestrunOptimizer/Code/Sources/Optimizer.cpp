@@ -2,7 +2,7 @@
 #include "OptimizationStrategy.h"
 #include "MedianStrategy.h"
 
-Optimizer::Optimizer(Data& test_runs) : test_runs(test_runs)
+Optimizer::Optimizer(Data& test_runs) noexcept : test_runs(test_runs)
 { }
 
 void Optimizer::setStrategy(StrategyType new_strategy) noexcept

@@ -13,15 +13,18 @@ public:
 	OptimizationStrategy(Data& test_runs);
 	Data optimize();
 	virtual ~OptimizationStrategy() = default;
+
 protected:
-	virtual void calculateNewLimit() = 0;
+	virtual CalculationResult calculateNewLimit() = 0;
+	SortedRuns sorted_runs;
+
 private:
-	double mean(const std::vector<double>& times) const;
-	double standardDeviation(const std::vector<double>& times) const;
+	double mean(const std::vector<double>& times);
+	double standardDeviation(const std::vector<double>& times);
 	void threeSdLaw(std::vector<double>& times, double sd);
 	void prepareData();
-	Data mergeData();
+	Data mergeData(const CalculationResult& calculation_results);
 	Data test_runs;
-	std::map<uint8_t, std::vector<double>> sorted_runs;
+	
 };
 

@@ -8,14 +8,14 @@ enum class StrategyType;
 class Optimizer
 {
 public:
-	Optimizer(Data& test_runs);
+	Optimizer(Data& test_runs) noexcept;
 	
-	Optimizer() = default;
-	Optimizer(const Optimizer&) = default;
-	Optimizer(Optimizer&&) = default;
-	Optimizer& operator=(const Optimizer&) = default;
-	Optimizer& operator=(Optimizer&&) = default;
-	~Optimizer() = default;
+	Optimizer() noexcept = default;
+	Optimizer(const Optimizer&) noexcept = default;
+	Optimizer(Optimizer&&) noexcept = default;
+	Optimizer& operator=(const Optimizer&) noexcept = default;
+	Optimizer& operator=(Optimizer&&) noexcept = default;
+	~Optimizer() noexcept = default;
 
 	void setStrategy(StrategyType new_strategy) noexcept;
 	Data optimize();

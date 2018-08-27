@@ -7,11 +7,16 @@ struct Duration
 	uint8_t hours;
 	uint8_t minutes;
 
-	operator double() const
-	{
-		double mins = minutes / 60.0;
-		return hours + mins;
-	}
+	operator double() const;
+	Duration(uint8_t hours, uint8_t minutes) noexcept;
+	Duration(double time) noexcept;
+
+	Duration() noexcept = default;
+	Duration(const Duration&) noexcept = default;
+	Duration(Duration&&) noexcept = default;
+	Duration& operator=(const Duration&) noexcept = default;
+	Duration& operator=(Duration&&) noexcept = default;
+	~Duration() noexcept = default;
 
 	bool operator==(const Duration& rhs) const;
 	bool operator!=(const Duration& rhs) const;
@@ -22,5 +27,4 @@ private:
 	{
 		return (hours * 60) + minutes;
 	}
-	Duration fromMinutes(unsigned minutes) const;
 };

@@ -3,7 +3,9 @@
 
 #include <gtest/gtest.h>
 #include <filesystem>
+#include <tuple>
 #include "Optimizer.h"
+#include "Duration.h"
 #include "OptimizationStrategy.h"
 #include "CsvReader.h"
 
@@ -14,10 +16,11 @@ public:
 	CsvReader reader;
 };
 
-TEST_F(OptimizationTestSuite, CanConstructOptimizer)
+TEST_F(OptimizationTestSuite, OptimizerTestForOneTestWithNormalDistribution)
 {
 	sut = reader.read("../input/normal_15.csv");
 
 	sut.setStrategy(StrategyType::MEDIAN);
-	sut.optimize();
+	Data expected{ {1, Duration{0, 53}} };
+	ASSERT_EQ(sut.optimize(), expected);
 }

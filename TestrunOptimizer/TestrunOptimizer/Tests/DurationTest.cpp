@@ -48,3 +48,33 @@ TEST_F(DurationTestSuite, ReadDurationFromIstreamShouldIncrementHourIfMinutesAre
 	Duration expected = { 2, 0 };
 	ASSERT_EQ(dur, expected);
 }
+
+TEST_F(DurationTestSuite, ConvertsProperlyFromDouble)
+{
+	Duration dur{ 1.0 };
+	Duration expected{ 1,0 };
+
+	ASSERT_EQ(dur, expected);
+	
+	dur = { 0.5 };
+	expected = { 0,30 };
+	ASSERT_EQ(dur, expected);
+
+	dur = { 1.5 };
+	expected = { 1,30 };
+	ASSERT_EQ(dur, expected);
+
+	dur = { 10/60.0 };
+	expected = { 0,10 };
+	ASSERT_EQ(dur, expected);
+}
+
+TEST_F(DurationTestSuite, LessOperatorWorksProperly)
+{
+	Duration lower{ 0, 30 };
+	Duration higher{ 0, 45 };
+	ASSERT_TRUE(lower < higher);
+
+	higher = { 1, 0 };
+	ASSERT_TRUE(lower < higher);
+}
