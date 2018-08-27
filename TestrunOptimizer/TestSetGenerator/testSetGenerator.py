@@ -1,5 +1,5 @@
 import sys
-from test import CsvGenerator
+from csvGenerator import CsvGenerator
 from scipy.stats import gamma, beta, norm, uniform, truncnorm
 from scipy import mean
 import datetime
@@ -24,7 +24,7 @@ class TestSetGenerator:
 
     def createDistribution(self, distributionCalc):
         output = dict()
-        for test_id in range(1, self.num_of_tests):
+        for test_id in range(1, self.num_of_tests+1):
             distribution_specific_time = list(map(self.convToTime, distributionCalc()))
             output[test_id] = distribution_specific_time
 
@@ -47,4 +47,4 @@ class TestSetGenerator:
         return uniform.rvs(size = self.num_of_runs , loc = 0, scale = self.max_duration)
 
 setGenerator = TestSetGenerator(filename, num_of_tests, max_duration, num_of_runs)
-setGenerator.createDistribution(setGenerator.betaDistribution)
+setGenerator.createDistribution(setGenerator.uniformDistribution)

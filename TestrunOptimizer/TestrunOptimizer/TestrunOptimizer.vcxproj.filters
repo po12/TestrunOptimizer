@@ -10,7 +10,6 @@
     <ClCompile Include="Code\Sources\OptimizationStrategy.cpp" />
     <ClCompile Include="Code\Sources\Optimizer.cpp" />
     <ClCompile Include="Code\Sources\MedianStrategy.cpp" />
-    <ClCompile Include="MEDIANSTRATEGY.CPP" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

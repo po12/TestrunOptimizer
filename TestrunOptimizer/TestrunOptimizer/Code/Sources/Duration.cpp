@@ -4,6 +4,23 @@
 #include "DurationExceptions.h"
 #include "Duration.h"
 
+Duration& Duration::operator+(const Duration& rhs)
+{
+	minutes += rhs.minutes;
+	if (minutes >= 60)
+	{
+		hours++;
+		minutes = minutes % 60;
+	}
+	hours += rhs.hours;
+	return *this;
+}
+
+bool Duration::operator<(const Duration& rhs) const
+{
+	return toMinutes() < rhs.toMinutes();
+}
+
 bool Duration::operator==(const Duration& rhs) const
 {
 	return hours == rhs.hours && minutes == rhs.minutes;

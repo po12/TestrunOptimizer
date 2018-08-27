@@ -9,5 +9,12 @@ struct Duration
 
 	bool operator==(const Duration& rhs) const;
 	bool operator!=(const Duration& rhs) const;
+	Duration& operator+(const Duration& rhs);
+	bool operator<(const Duration& rhs) const;
 	friend std::istream& operator>>(std::istream&, Duration&);
+private:
+	unsigned toMinutes() const
+	{
+		return (hours * 60) + minutes;
+	}
 };

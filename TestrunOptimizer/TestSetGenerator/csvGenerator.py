@@ -8,7 +8,7 @@ class CsvGenerator:
         self.max_duration = max_duration
         self.num_of_runs = num_of_runs
         self.labels = ["Test ID", "Duration"]
-        self.writer = csv.DictWriter(open(filename, "w+"), delimiter =',', quoting=csv.QUOTE_MINIMAL, fieldnames = self.labels)
+        self.writer = csv.DictWriter(open(filename, "w+"), delimiter =',', quoting=csv.QUOTE_MINIMAL, fieldnames = self.labels, lineterminator='\n')
 
     def genTestId(self):
         return randint(1, self.num_of_tests)
