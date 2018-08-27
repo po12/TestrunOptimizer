@@ -1,20 +1,7 @@
 #include <sstream>
 #include <array>
-
 #include "DurationExceptions.h"
 #include "Duration.h"
-
-Duration& Duration::operator+(const Duration& rhs)
-{
-	minutes += rhs.minutes;
-	if (minutes >= 60)
-	{
-		hours++;
-		minutes = minutes % 60;
-	}
-	hours += rhs.hours;
-	return *this;
-}
 
 bool Duration::operator<(const Duration& rhs) const
 {
@@ -29,6 +16,13 @@ bool Duration::operator==(const Duration& rhs) const
 bool Duration::operator!=(const Duration& rhs) const
 {
 	return !(*this == rhs);
+}
+Duration Duration::fromMinutes(unsigned minutes) const
+{
+	Duration dur;
+	dur.minutes = minutes % 60;
+	dur.hours = (minutes - dur.minutes) / 60;
+	return dur;
 }
 
 std::istream& operator>>(std::istream& is, Duration& dur)

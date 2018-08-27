@@ -52,6 +52,7 @@
     <ClCompile Include="Code\Sources\MedianStrategy.cpp" />
     <ClCompile Include="Tests\CsvReaderTest.cpp" />
     <ClCompile Include="Tests\DurationTest.cpp" />
+    <ClCompile Include="Tests\OptimizerTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
