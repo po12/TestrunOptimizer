@@ -2,10 +2,10 @@
 #define _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING
 
 #include <gtest/gtest.h>
-
+#include <filesystem>
 #include "CsvReader.h"
 #include "TypesAliases.h"
-#include <filesystem>
+
 
 class CsvReaderTestSuite : public ::testing::Test
 {

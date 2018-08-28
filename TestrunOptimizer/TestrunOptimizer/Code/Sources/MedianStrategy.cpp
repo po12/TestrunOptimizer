@@ -1,5 +1,5 @@
-#include "MedianStrategy.h"
 #include <set>
+#include "MedianStrategy.h"
 
 MedianStrategy::MedianStrategy(Data& test_runs) : OptimizationStrategy(test_runs)
 {}
@@ -21,7 +21,7 @@ double MedianStrategy::median(const std::vector<double>& times) const
 
 CalculationResult MedianStrategy::calculateNewLimit()
 {
-	std::map<uint8_t, double> result;
+	CalculationResult result;
 	
 	for (auto &[key, val] : sorted_runs)
 	{

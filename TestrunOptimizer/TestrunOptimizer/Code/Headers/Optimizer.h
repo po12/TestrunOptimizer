@@ -8,7 +8,7 @@ enum class StrategyType;
 class Optimizer
 {
 public:
-	Optimizer(Data& test_runs) noexcept;
+	Optimizer(Data& test_runs, StrategyType strategy) noexcept;
 	
 	Optimizer() noexcept = default;
 	Optimizer(const Optimizer&) noexcept = default;

@@ -1,6 +1,5 @@
 #pragma once
 #include "TypesAliases.h"
-#include <map>
 
 enum class StrategyType
 {

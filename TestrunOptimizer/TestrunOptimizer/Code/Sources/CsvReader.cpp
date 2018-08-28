@@ -1,5 +1,5 @@
-#include "CsvReader.h"
 #include <sstream>
+#include "CsvReader.h"
 #include "TypesAliases.h"
 
 Data CsvReader::readStream(std::istream& is)

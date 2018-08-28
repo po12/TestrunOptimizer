@@ -1,6 +1,6 @@
-#include "OptimizationStrategy.h"
 #include <numeric>
 #include <algorithm>
+#include "OptimizationStrategy.h"
 
 OptimizationStrategy::OptimizationStrategy(Data& test_runs) : test_runs(test_runs)
 {

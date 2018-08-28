@@ -16,8 +16,7 @@ public:
 	CsvReader reader;
 	void setupMedianTest(const char* path)
 	{
-		sut = reader.read(path);
-		sut.setStrategy(StrategyType::MEDIAN);
+		sut = { reader.read(path), StrategyType::MEDIAN };
 	}
 
 	void verifyOptimization(const Data& expected)

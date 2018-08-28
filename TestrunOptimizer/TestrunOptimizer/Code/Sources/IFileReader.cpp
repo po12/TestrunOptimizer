@@ -1,11 +1,9 @@
 #include <filesystem>
 #include "IFileReader.h"
 
-namespace fs = std::filesystem;
-
-Data IFileReader::read(const fs::path& path)
+Data IFileReader::read(const std::filesystem::path& path)
 {
-	if(fs::exists(path))
+	if(std::filesystem::exists(path))
 	{
 		std::ifstream is{ path.string(), std::ifstream::in };
 		return readStream(is);
