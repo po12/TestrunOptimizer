@@ -8,8 +8,8 @@
 │     ├── testSetGenerator.py\
 ├── TestrunOptimizer\
 │     ├── Code\
-│         ├── Headers (all *.h files)\
-│         ├── Sources (all *.cpp files with implementation)\
+│         ├──── Headers (all *.h files)\
+│         ├──── Sources (all *.cpp files with implementation)\
 │     ├── Tests (all UT)
 
 
